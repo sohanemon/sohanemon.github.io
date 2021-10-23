@@ -1,0 +1,38 @@
+body{
+    font-family: 'Ubuntu', sans-serif;
+}
+.banner-container{
+    /* background-color: darkgreen; */
+    background-image: url(/img/code-origin.jpg);
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+    background-position: center;
+}
+.banner-column{
+    margin-bottom: 4rem;
+    margin-top: revert;
+
+}
+#sohanemon-init{
+    font-weight: bolder;
+    color: #77018C;
+
+}
+#sohanemon-details{
+    color: #770161;
+}
+.display-6{
+    font-size: calc(1.375rem + 3.5vw);
+}
+.navbar-container{
+    background-color: #8B01FF;
+}
+.about-container{
+    background-color: lightgray;
+}
+.about-container .container p{
+    color: #770161;
+}
+.education-container{
+    background-color: #436088;
+}
