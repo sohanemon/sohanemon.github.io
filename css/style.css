@@ -36,9 +36,13 @@ body{
     color: #770161;
 }
 .education-container{
+    
+    overflow: hidden;
     background-color: #436088;
 }
 .project-container{
+
+    overflow: hidden;
         border: 0px;
     background-color: darkorange;
 }
@@ -71,3 +75,37 @@ body{
     background-color: #0D6D68;
     border-color: #0D6E4E;
 }
+.card{
+    margin: 15px;
+    
+    background-color: #770161;
+}
+.card-group {
+    font-size: 17px;
+    line-height: 26px;
+    letter-spacing: 0.07em;
+    font-weight: 900;
+    font-style: normal;
+    color: #ff8c00;
+    }
+.btn-outline-success:hover {
+    /*! color:#090909; */
+    background-color:#ff8c00;
+    border-color:#ff8c00;
+}
+.btn-outline-success {
+    color:#ff8c00;
+    border-color:#ff8c00;
+}
+.text-muted {
+    --bs-text-opacity:1;
+    color:violet;
+}
+.headlines{
+        font-size: 2rem;
+        line-height: 1.2;
+        letter-spacing: 0.28em;
+        font-weight: 500;
+       
+}
+      
