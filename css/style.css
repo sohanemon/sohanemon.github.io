@@ -87,6 +87,7 @@ body{
     font-weight: 900;
     font-style: normal;
     color: #ff8c00;
+    padding-bottom: 35px;
     }
 .btn-outline-success:hover {
     /*! color:#090909; */
