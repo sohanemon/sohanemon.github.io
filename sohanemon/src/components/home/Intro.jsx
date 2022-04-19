@@ -26,7 +26,7 @@ const Intro = () => {
             </p>
           </div>
 
-          <button className={button + " max-w-[100px]"}>Hire me</button>
+          <button className="button max-w-[100px]">Hire me</button>
           <div className=" flex flex-row gap-8 ">
             <IconContext.Provider
               value={{
@@ -56,11 +56,11 @@ const Intro = () => {
           <div className="absolute right-0 top-6">
             {card(crown, "Boss", "Developer")}
           </div>
-          <div className="absolute left-0 bottom-16">
+          <div className="absolute  bottom-16">
             {card(thumbup, "Pro", "Designer")}
           </div>
           <img
-            className="absolute top-0 left-0 w-36"
+            className="absolute top-0  w-36"
             src={glassesimoji}
             alt="imoji"
           />

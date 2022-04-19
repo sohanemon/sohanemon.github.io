@@ -6,3 +6,9 @@
   font-family: Gumela;
   src: url("./fonts/Gumela\ Regular.otf");
 }
+@layer components {
+  .button {
+    @apply bg-orange-300 hover:ring-orange-300  ring-1 ring-transparent text-white rounded-3xl px-3 py-2  bg-gradient-to-r from-orange-300 to-orange-400 hover:from-white hover:to-white shadow-xl hover:shadow-transparent
+    font-semibold font-[Gumela] tracking-wider cursor-pointer hover:text-orange-300  shadow-orange-300;
+  }
+}

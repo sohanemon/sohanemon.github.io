@@ -1,8 +1,6 @@
 import React from "react";
 export const style = {
   li: "font-thin cursor-pointer hover:text-orange-300 hover:font-extrabold ",
-  button:
-    "bg-orange-300 hover:ring-orange-300  ring-1 ring-transparent text-white rounded-3xl px-3 py-2  bg-gradient-to-r from-orange-300 to-orange-400 hover:from-white hover:to-white shadow-xl hover:shadow-transparent  shadow-orange-300",
 };
 export const button = style.li + style.button;
 const Navbar = () => {
@@ -16,7 +14,7 @@ const Navbar = () => {
           <li className={style.li}>Portfolio</li>
           <li className={style.li}>Experience</li>
           <li className={style.li}>Testimonial</li>{" "}
-          <button className={button}>Contact Me</button>
+          <button className="button">Contact Me</button>
         </ul>
       </div>
     </div>

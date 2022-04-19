@@ -1,5 +1,4 @@
 import React from "react";
-import { button } from "../nav/Navbar";
 import humble from "../../img/humble.png";
 import glasses from "../../img/glasses.png";
 import heartemoji from "../../img/heartemoji.png";
@@ -7,7 +6,7 @@ import heartemoji from "../../img/heartemoji.png";
 const Services = () => {
   return (
     <div className="flex h-[70vh]">
-      <div className="flex flex-col m-12 gap-4 my-32 ">
+      <div className=" flex flex-col m-12 gap-4 my-32 ">
         <div className="font-bold font-[Gumela]">
           <p className="text-5xl text-slate-600">Available</p>{" "}
           <p className="text-6xl text-orange-400"> Services</p>{" "}
@@ -19,7 +18,7 @@ const Services = () => {
           </p>
         </div>
         <div>
-          <button className={button + "max-w-md mt-10"}>Download CV</button>
+          <button className="button max-w-md mt-10">Download CV</button>
         </div>
       </div>
       <div className="relative flex-1">
