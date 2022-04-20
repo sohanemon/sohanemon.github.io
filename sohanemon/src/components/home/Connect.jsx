@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { motion } from "framer-motion";
 const inputStyle =
   "ring ring-orange-400 rounded-md p-3 focus:outline-orange-600  ";
 const Connect = () => {
@@ -45,18 +46,19 @@ const Connect = () => {
         />
         <textarea
           name="message"
-          placeholder="W
-          
-          rite your Message here"
+          placeholder="Write your Message here"
           className={inputStyle}
           type="text"
         />
-        <button
+        <motion.button
+          initial={{ y: 30 }}
+          transition={{ duration: 1 }}
+          whileInView={{ y: 0 }}
           className="button self-center px-6 max-w-min"
           onClick={sendEmail}
         >
           Send
-        </button>
+        </motion.button>
       </div>
     </div>
   );

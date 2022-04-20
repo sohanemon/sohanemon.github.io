@@ -2,6 +2,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
 import "swiper/css/pagination";
+import { motion } from "framer-motion";
 import profile1 from "../../img/profile1.jpg";
 import profile2 from "../../img/profile2.jpg";
 import profile3 from "../../img/profile3.jpg";
@@ -45,7 +46,16 @@ const Reviews = () => {
   return (
     <div className="p-10">
       <p className="text1 text-4xl text-center">
-        All the <span className="text2 text-4xl">Exceptional</span> Reviews
+        All the{" "}
+        <motion.p
+          initial={{ y: -100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 2, type: "spring" }}
+          className="text2 text-4xl inline-block"
+        >
+          Exceptional
+        </motion.p>{" "}
+        Reviews
       </p>
       <br />
       <Swiper

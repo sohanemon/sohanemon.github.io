@@ -3,6 +3,7 @@ import image1 from "../../vector/black.png";
 import crown from "../../img/crown.png";
 import thumbup from "../../img/thumbup.png";
 import glassesimoji from "../../img/glassesimoji.png";
+import { motion } from "framer-motion";
 import {
   AiFillGithub,
   AiFillYoutube,
@@ -41,14 +42,21 @@ export const socialIcon = (className, size) => {
 export const hireMeBtn = (
   <button className="button max-w-[100px]">Hire me</button>
 );
+
+const inView = {
+  opacity: 1,
+  transition: { type: "spring", duration: 2 },
+  x: 0,
+};
+
 const Intro = () => {
   return (
     <>
       <div className="flex font-[Gumela] mt-24 mx-12 ">
         <div className="flex flex-col gap-y-24  flex-1">
-          <div>
-            <p className="text-7xl font-semibold text-slate-800 ">Hello, itz</p>
-            <p className="text-8xl font-semibold text-orange-300">Sohan Emon</p>
+          <div className="font-semibold">
+            <p className="text-7xl  text-slate-800 ">Hello, itz</p>
+            <p className="text-8xl  text-orange-300">Sohan Emon</p>
             <p className="text-slate-400 font-mono">
               Full stack web developer with high experiences in designing and
               developing...
@@ -62,20 +70,34 @@ const Intro = () => {
           )}
         </div>
 
-        <div className="flex-1 relative ">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={inView}
+          className="flex-1 relative "
+        >
           <img src={image1} alt="Emon" />
-          <div className="absolute right-0 top-6">
+          <motion.div
+            initial={{ x: 100, opacity: 0 }}
+            whileInView={inView}
+            className="absolute right-0 top-6"
+          >
             {card(crown, "Boss", "Developer")}
-          </div>
-          <div className="absolute  bottom-16">
+          </motion.div>
+          <motion.div
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={inView}
+            className="absolute  bottom-16"
+          >
             {card(thumbup, "Pro", "Designer")}
-          </div>
-          <img
+          </motion.div>
+          <motion.img
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={inView}
             className="absolute top-0  w-36"
             src={glassesimoji}
             alt="imoji"
           />
-        </div>
+        </motion.div>
       </div>
     </>
   );

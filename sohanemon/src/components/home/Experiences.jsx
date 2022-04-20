@@ -1,5 +1,5 @@
 import React from "react";
-
+import { motion } from "framer-motion";
 const Experiences = () => {
   return (
     <div className="flex justify-center items-center gap-24">
@@ -16,14 +16,25 @@ const circle = (num, text1, text2) => {
       id="experiences"
       className="flex flex-col items-center text-lg justify-around font-semibold my-32 h-[30vh]"
     >
-      <div className=" rounded-full p-2 bg-gradient-to-r from-orange-500 to-sky-400">
-        <div className="bg-white rounded-full w-24 h-24 flex justify-center items-center">
+      <motion.div
+        whileInView={{ rotate: 360 }}
+        transition={{ duration: 0.5, repeat: Infinity, ease: "linear" }}
+        viewport={{ once: true }}
+        className=" rounded-full p-2 bg-gradient-to-r from-orange-500 to-sky-400"
+      >
+        <motion.div
+          initial={{ rotate: 360 }}
+          whileInView={{ rotate: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, repeat: Infinity, ease: "linear" }}
+          className="bg-white rounded-full w-24 h-24 flex justify-center items-center"
+        >
           <p className="font-bold ml-1 text-2xl text-slate-700">
             {num}
             <span className="text-3xl">+</span>
           </p>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
       <div className="text-center">
         <p className="text-slate-700 font-mono">{text1}</p>
         <p className="text-orange-500 text-xl">{text2}</p>

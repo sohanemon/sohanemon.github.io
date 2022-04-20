@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 import humble from "../../img/humble.png";
 import glasses from "../../img/glasses.png";
@@ -22,25 +23,33 @@ const Services = () => {
       </div>
       <div className="relative flex-1">
         <div className="absolute top-0 right-10 ">
-          {card(heartemoji, "Design", "Figma, Adobe XD, Photoshop")}
+          {card(heartemoji, "Design", "Figma, Adobe XD, Photoshop", 100)}
         </div>
         <div className="absolute top-1/4 left-2">
           {card(
             glasses,
             "Develop",
-            "Javascript, React, Laravel, Node, Express"
+            "Javascript, React, Laravel, Node, Express",
+            -100
           )}
         </div>
         <div className="absolute bottom-10 right-20">
-          {card(humble, "UI/UX", "Sketch, MockUP")}
+          {card(humble, "UI/UX", "Sketch, MockUP", 100)}
         </div>
       </div>
     </div>
   );
 };
-const card = (icon, text1, text2) => {
+const card = (icon, text1, text2, x) => {
   return (
-    <div className="flex flex-col h-60 w-52 ring-4 shadow-xl ring-orange-200 justify-center text-center items-center drop-shadow-xl rounded-xl px-4 z-50 bg-white ">
+    <motion.div
+      initial={{ opacity: 0, x: `${x}` }}
+      // initial={{ x: -100 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      transition={{ duration: 3, type: "spring" }}
+      viewport={{ once: true }}
+      className="flex flex-col h-60 w-52 ring-4 shadow-xl ring-orange-200 justify-center text-center items-center drop-shadow-xl rounded-xl px-4 z-50 bg-white "
+    >
       <img className="h-24" src={icon} alt={text1 + text2} />
       <div className="font-sans font-semibold ">
         <p className="text-xl font-serif text-slate-800">{text1}</p>
@@ -49,7 +58,7 @@ const card = (icon, text1, text2) => {
       <button className="text-sm font-serif hover:text-blue-500 hover:bg-blue-200 text-blue-400 my-3 px-2 py-1 rounded-xl">
         Learn more
       </button>
-    </div>
+    </motion.div>
   );
 };
 export default Services;

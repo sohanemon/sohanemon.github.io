@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { hireMeBtn } from "./Intro";
 import amazon from "../../img/amazon.png";
 import fiverr from "../../img/fiverr.png";
@@ -20,7 +21,13 @@ const Workplaces = () => {
         {hireMeBtn}
       </div>
       {/* Right Side */}
-      <div className="flex relative flex-1 flex-col justify-center items-center gap-y-6 ">
+      <motion.div
+        initial={{ rotate: 45 }}
+        whileInView={{ rotate: 0 }}
+        transition={{ duration: 3, type: "spring" }}
+        viewport={{ once: true }}
+        className="flex relative flex-1 flex-col justify-center items-center gap-y-6 "
+      >
         {circle(facebook)}
         <div className="flex gap-x-6">
           {circle(fiverr)}
@@ -31,7 +38,7 @@ const Workplaces = () => {
         <div className=" rounded-full h-72 bg-slate-50 w-72 absolute -z-10 filter drop-shadow-2xl shadow-slate-900"></div>
         <div className=" rounded-full h-52  bg-orange-300 right-20 bottom-6  w-52 absolute -z-20 filter drop-shadow-2xl shadow-slate-900"></div>
         <div className=" rounded-full h-52 bg-slate-300 w-52  right-20 top-6 absolute -z-20 filter drop-shadow-2xl shadow-slate-900"></div>
-      </div>
+      </motion.div>
     </div>
   );
 };

@@ -1,6 +1,5 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import hoc from "../../img/hoc.png";
 import ecommerce from "../../img/ecommerce.png";
 import musicapp from "../../img/musicapp.png";
