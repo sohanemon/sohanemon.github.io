@@ -5,14 +5,13 @@ import heartemoji from "../../img/heartemoji.png";
 
 const Services = () => {
   return (
-    <div className="flex h-[70vh]">
+    <div className="flex h-[70vh] mt-32">
       <div className=" flex flex-col m-12 gap-4 my-32 ">
         <div className="font-bold font-[Gumela]">
-          <p className="text-5xl text-slate-600">Available</p>{" "}
-          <p className="text-6xl text-orange-400"> Services</p>{" "}
+          <p className="text1">Available</p> <p className="text2"> Services</p>{" "}
         </div>
         <div>
-          <p className="text-slate-400">
+          <p className="text3">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum,
             accusantium aliquid
           </p>

@@ -9,11 +9,21 @@ const Navbar = () => {
       <div className="flex-1 font-extrabold text-2xl">SohanEmon</div>
       <div className=" flex-1 ">
         <ul className="flex flex-row list-none gap-6 justify-center items-center">
-          <li className={style.li}>Home</li>
-          <li className={style.li}>Servies</li>
-          <li className={style.li}>Portfolio</li>
-          <li className={style.li}>Experience</li>
-          <li className={style.li}>Testimonial</li>{" "}
+          <li className={style.li}>
+            <a href="#">Home</a>
+          </li>
+          <li className={style.li}>
+            <a href="#">Servies</a>
+          </li>
+          <li className={style.li}>
+            <a href="#">Portfolio</a>
+          </li>
+          <li className={style.li}>
+            <a href="#experiences">Experience</a>
+          </li>
+          <li className={style.li}>
+            <a href="#">Testimonial</a>
+          </li>{" "}
           <button className="button">Contact Me</button>
         </ul>
       </div>
