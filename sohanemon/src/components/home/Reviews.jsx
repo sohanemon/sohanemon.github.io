@@ -51,6 +51,7 @@ const Reviews = () => {
           initial={{ y: -100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 2, type: "spring" }}
+          viewport={{ once: true }}
           className="text2 text-4xl inline-block"
         >
           Exceptional

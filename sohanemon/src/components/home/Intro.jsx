@@ -40,7 +40,12 @@ export const socialIcon = (className, size) => {
 };
 
 export const hireMeBtn = (
-  <button className="button max-w-[100px]">Hire me</button>
+  <motion.button
+    animate={{ scale: 1.05, transition: { duration: 1, yoyo: Infinity } }}
+    className="button max-w-[100px]"
+  >
+    Hire me
+  </motion.button>
 );
 
 const inView = {

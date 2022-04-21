@@ -18,7 +18,15 @@ const Services = () => {
           </p>
         </div>
         <div>
-          <button className="button max-w-md mt-10">Download CV</button>
+          <motion.button
+            animate={{
+              scale: 1.05,
+              transition: { duration: 1, yoyo: Infinity },
+            }}
+            className="button max-w-md mt-10"
+          >
+            Download CV
+          </motion.button>
         </div>
       </div>
       <div className="relative flex-1">

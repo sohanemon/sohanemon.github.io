@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
+import { seSvg } from "../nav/Navbar";
 const inputStyle =
   "ring ring-orange-400 rounded-md p-3 focus:outline-orange-600  ";
 const Connect = () => {
@@ -27,9 +28,12 @@ const Connect = () => {
   };
   return (
     <div className=" container justify-evenly flex h-[60vh] my-12 ">
-      <div className=" flex flex-col justify-center pb-40">
-        <p className="text1">Get in touch </p>
-        <p className="text2 text-3xl">by Connecting with me</p>
+      <div className=" flex flex-col justify-center items-center gap-10 pb-4">
+        <div className="text-center">
+          <p className="text1">Get in touch </p>
+          <p className="text2 text-3xl ">by Connecting with</p>
+        </div>
+        {seSvg(200)}
       </div>
       <div ref={form} className=" flex flex-col justify-center gap-12 w-1/3 ">
         <input
@@ -51,9 +55,15 @@ const Connect = () => {
           type="text"
         />
         <motion.button
-          initial={{ y: 30 }}
-          transition={{ duration: 1 }}
-          whileInView={{ y: 0 }}
+          initial={{ y: 10 }}
+          animate={{ scale: 1.05, transition: { duration: 1, yoyo: Infinity } }}
+          whileTap={{
+            scale: 0.7,
+            transition: {
+              duration: 1,
+            },
+          }}
+          whileInView={{ y: 0, transition: { yoyo: false, duration: 1 } }}
           className="button self-center px-6 max-w-min"
           onClick={sendEmail}
         >
