@@ -10,7 +10,7 @@ import Workplaces from "./Workplaces";
 
 const Home = () => {
   return (
-    <>
+    <div className="overflow-x-hidden">
       <Intro />
       <Services />
       <Experiences />
@@ -19,7 +19,7 @@ const Home = () => {
       <Reviews />
       <Connect />
       <Footer />
-    </>
+    </div>
   );
 };
 

@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 const Experiences = () => {
   return (
-    <div className="flex justify-center items-center gap-24">
+    <div className="flex justify-evenly md:justify-center items-center 4 md:gap-24">
       {circle(3, "Years", "Experience")}
       {circle(5, "Running", "Projects")}
       {circle(30, "Completed", "Projects")}
@@ -14,7 +14,7 @@ const circle = (num, text1, text2) => {
   return (
     <div
       id="experiences"
-      className="flex flex-col items-center text-lg justify-around font-semibold my-32 h-[30vh]"
+      className="flex flex-col items-center  text-lg justify-around font-semibold my-32  md:h-[30vh]"
     >
       <motion.div
         whileInView={{ rotate: 360 }}

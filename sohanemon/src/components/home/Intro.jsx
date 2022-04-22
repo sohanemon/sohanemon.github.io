@@ -57,7 +57,7 @@ const inView = {
 const Intro = () => {
   return (
     <>
-      <div className="flex font-[Gumela] mt-24 mx-12 ">
+      <div className="flex flex-col md:flex-row flex-col-reverse font-[Gumela] mt-24 mx-12 ">
         <div className="flex flex-col gap-y-24  flex-1">
           <div className="font-semibold">
             <p className="text-7xl  text-slate-800 ">Hello, itz</p>
@@ -69,36 +69,38 @@ const Intro = () => {
           </div>
 
           {hireMeBtn}
-          {socialIcon(
-            "hover:fill-orange-400 fill-white stroke-orange-400 stroke-[40px] hover:scale-110",
-            3
-          )}
+          <div className="flex justify-center md:justify-start">
+            {socialIcon(
+              "hover:fill-orange-400 fill-white stroke-orange-400 stroke-[40px] hover:scale-110",
+              3
+            )}
+          </div>
         </div>
 
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={inView}
-          className="flex-1 relative "
+          className=" flex-1 relative "
         >
-          <img src={image1} alt="Emon" />
+          <img className="" src={image1} alt="Emon" />
           <motion.div
             initial={{ x: 100, opacity: 0 }}
             whileInView={inView}
-            className="absolute right-0 top-6"
+            className="hidden sm:inline-block absolute right-0 top-6"
           >
             {card(crown, "Boss", "Developer")}
           </motion.div>
           <motion.div
             initial={{ x: -100, opacity: 0 }}
             whileInView={inView}
-            className="absolute  bottom-16"
+            className="hidden sm:inline-block absolute  bottom-16"
           >
             {card(thumbup, "Pro", "Designer")}
           </motion.div>
           <motion.img
             initial={{ x: -100, opacity: 0 }}
             whileInView={inView}
-            className="absolute top-0  w-36"
+            className="hidden sm:inline-block absolute top-0  w-36"
             src={glassesimoji}
             alt="imoji"
           />

@@ -12,7 +12,7 @@ export const draw = {
       pathLength: 1,
       opacity: 1,
       transition: {
-        pathLength: { delay, type: "spring", duration: 4, bounce: 0 },
+        pathLength: { delay, type: "spring", duration: 7, bounce: 0 },
         opacity: { delay, duration: 0.01 },
       },
     };
@@ -52,12 +52,12 @@ export const seSvg = (size) => (
 export const button = style.li + style.button;
 const Navbar = () => {
   return (
-    <div className="flex font-[Gumela]  items-center h-[10vh]  text-slate-600  mx-12">
-      <div className="flex flex-1 font-extrabold   text-2xl items-center">
+    <div className="flex font-[Gumela]  items-center h-[10vh]  text-slate-600  my-4  mx-12">
+      <div className="flex flex-1 font-extrabold justify-center lg:justify-start text-2xl items-center">
         <div> {seSvg(80)}</div>
         <div className="text-orange-400">SohanEmon</div>
       </div>
-      <div className=" flex-1 invisible  sm:visible ">
+      <div className=" flex-1 hidden lg:inline-block  ">
         <ul className="flex flex-row list-none gap-6 justify-center items-center">
           <li className={style.li}>
             <a href="#">Home</a>

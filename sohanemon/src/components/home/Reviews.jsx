@@ -2,6 +2,9 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
 import "swiper/css/pagination";
+import "swiper/css/effect-cards";
+import { Autoplay } from "swiper";
+
 import { motion } from "framer-motion";
 import profile1 from "../../img/profile1.jpg";
 import profile2 from "../../img/profile2.jpg";
@@ -44,7 +47,7 @@ const reviews = [
 ];
 const Reviews = () => {
   return (
-    <div className="p-10">
+    <div className="p-10 mb-56 sm:mb-32 md:mb-0">
       <p className="text1 text-4xl text-center">
         All the{" "}
         <motion.p
@@ -60,9 +63,11 @@ const Reviews = () => {
       </p>
       <br />
       <Swiper
-        className=" w-2/3 p-1"
-        modules={[Pagination]}
+        className=" w-full p-1"
+        modules={[Pagination, Autoplay]}
+        autoplay={{ delay: 3000 }}
         pagination={{ clickable: true }}
+        loop={true}
         slidesPerView={1}
         grabCursor={true}
       >

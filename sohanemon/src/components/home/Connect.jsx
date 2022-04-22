@@ -27,15 +27,18 @@ const Connect = () => {
       );
   };
   return (
-    <div className=" container justify-evenly flex h-[60vh] my-12 ">
-      <div className=" flex flex-col justify-center items-center gap-10 pb-4">
+    <div className=" container justify-evenly flex flex-col md:flex-row h-[60vh] mx-auto m-12  mb-40 sm:mb-0 ">
+      <div className=" flex flex-col justify-center items-center gap-10 pb-4 mx-auto">
         <div className="text-center">
           <p className="text1">Get in touch </p>
           <p className="text2 text-3xl ">by Connecting with</p>
         </div>
         {seSvg(200)}
       </div>
-      <div ref={form} className=" flex flex-col justify-center gap-12 w-1/3 ">
+      <div
+        ref={form}
+        className=" flex flex-col justify-center gap-12 md:w-1/3 w-2/3 mx-auto  "
+      >
         <input
           name="user_name"
           placeholder="Your name"

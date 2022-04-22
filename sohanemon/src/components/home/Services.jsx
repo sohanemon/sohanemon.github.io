@@ -6,15 +6,14 @@ import heartemoji from "../../img/heartemoji.png";
 
 const Services = () => {
   return (
-    <div className="flex h-[70vh] mt-32">
-      <div className=" flex flex-col m-12 gap-4 my-32 ">
+    <div className="flex flex-col md:flex-row  md:h-[70vh] md:mt-32">
+      <div className=" flex flex-col flex-1 m-12 gap-4 my-32 ">
         <div className="font-bold font-[Gumela]">
           <p className="text1">Available</p> <p className="text2"> Services</p>{" "}
         </div>
         <div>
           <p className="text3">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum,
-            accusantium aliquid
           </p>
         </div>
         <div>
@@ -29,11 +28,11 @@ const Services = () => {
           </motion.button>
         </div>
       </div>
-      <div className="relative flex-1">
-        <div className="absolute top-0 right-10 ">
+      <div className="relative flex-1 ">
+        <div className=" md:absolute top-0 right-10 ">
           {card(heartemoji, "Design", "Figma, Adobe XD, Photoshop", 100)}
         </div>
-        <div className="absolute top-1/4 left-2">
+        <div className=" md:absolute top-1/4 left-2">
           {card(
             glasses,
             "Develop",
@@ -41,7 +40,7 @@ const Services = () => {
             -100
           )}
         </div>
-        <div className="absolute bottom-10 right-20">
+        <div className=" md:absolute bottom-10 right-20">
           {card(humble, "UI/UX", "Sketch, MockUP", 100)}
         </div>
       </div>
@@ -56,7 +55,7 @@ const card = (icon, text1, text2, x) => {
       whileInView={{ x: 0, opacity: 1 }}
       transition={{ duration: 3, type: "spring" }}
       viewport={{ once: true }}
-      className="flex flex-col h-60 w-52 ring-4 shadow-xl ring-orange-200 justify-center text-center items-center drop-shadow-xl rounded-xl px-4 z-50 bg-white "
+      className="flex flex-col items-center  lg:h-60 md:w-52 w-1/2 mx-auto my-10 ring-4 shadow-xl ring-orange-200 justify-center text-center  drop-shadow-xl rounded-xl px-4 z-50 bg-white "
     >
       <img className="h-24" src={icon} alt={text1 + text2} />
       <div className="font-sans font-semibold ">
