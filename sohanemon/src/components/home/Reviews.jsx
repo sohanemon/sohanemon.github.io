@@ -48,7 +48,7 @@ const reviews = [
 const Reviews = () => {
   return (
     <div className="p-10 mb-56 sm:mb-32 md:mb-0">
-      <p className="text1 text-4xl text-center">
+      <p className="text1 text-4xl text-center dark:text-slate-100">
         All the{" "}
         <motion.p
           initial={{ y: -100, opacity: 0 }}
@@ -74,7 +74,7 @@ const Reviews = () => {
         {reviews.map((e) => (
           <SwiperSlide className="flex flex-col items-center border-4  border-slate-300 rounded-lg p-6  gap-5">
             <img className="rounded-full w-32 h-32" src={e.icon} alt="" />
-            <p className="text3 text-lg">{e.review}</p>
+            <p className="text3 text-lg dark:text-slate-300">{e.review}</p>
           </SwiperSlide>
         ))}
       </Swiper>

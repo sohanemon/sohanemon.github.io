@@ -1,5 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { motion } from "framer-motion";
+import { MdNightlight } from "react-icons/md";
+import { IoSunnySharp } from "react-icons/io5";
+import { ThemeContext } from "../../App";
+import { IconContext } from "react-icons";
 export const style = {
   li: "font-thin cursor-pointer hover:text-orange-300 hover:font-extrabold ",
 };
@@ -20,7 +24,7 @@ export const draw = {
 };
 export const seSvg = (size) => (
   <svg
-    className="stroke-orange-400 stroke-[8px] hover:fill-orange-400 hover:scale-105 hover:stroke-transparent fill-transparent"
+    className="stroke-orange-400 stroke-[8px] mt-5 hover:fill-orange-400 hover:scale-105 hover:stroke-transparent fill-transparent"
     width={size}
     height={size}
     viewBox="0 0 207 328"
@@ -51,11 +55,30 @@ export const seSvg = (size) => (
 );
 export const button = style.li + style.button;
 const Navbar = () => {
+  const { setDarkMode, darkMode } = useContext(ThemeContext);
+
   return (
-    <div className="flex font-[Gumela]  items-center h-[10vh]  text-slate-600  my-4  mx-12">
+    <div className="flex font-[Gumela]   items-center h-[10vh] dark:text-slate-100 text-slate-600  py-6  mx-12">
       <div className="flex flex-1 font-extrabold justify-center lg:justify-start text-2xl items-center">
         <div> {seSvg(80)}</div>
-        <div className="text-orange-400">SohanEmon</div>
+        <div className="text-orange-400">SohanEmon</div>{" "}
+        <IconContext.Provider value={{ className: `fill-orange-400  ` }}>
+          <div
+            onClick={() => setDarkMode((p) => !p)}
+            className="flex relative border-2 rounded-full p-1  mx-3 border-orange-400 overflow-hidden
+            "
+          >
+            <IoSunnySharp className="cursor-pointer  " />
+            <MdNightlight className="cursor-pointer  " />
+            <div
+              className={` h-6 w-6 absolute bg-orange-400 rounded-full ${
+                darkMode ? "right-1" : "left-1"
+              }`}
+            >
+              {" "}
+            </div>
+          </div>
+        </IconContext.Provider>
       </div>
       <div className=" flex-1 hidden lg:inline-block  ">
         <ul className="flex flex-row list-none gap-6 justify-center items-center">

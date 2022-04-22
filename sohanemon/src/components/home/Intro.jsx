@@ -57,10 +57,12 @@ const inView = {
 const Intro = () => {
   return (
     <>
-      <div className="flex flex-col md:flex-row flex-col-reverse font-[Gumela] mt-24 mx-12 ">
+      <div className="flex  md:flex-row flex-col-reverse  font-[Gumela] mt-24 mx-12 ">
         <div className="flex flex-col gap-y-24  flex-1">
           <div className="font-semibold">
-            <p className="text-7xl  text-slate-800 ">Hello, itz</p>
+            <p className="text-7xl  text-slate-800 dark:text-slate-100 ">
+              Hello, itz
+            </p>
             <p className="text-8xl  text-orange-300">Sohan Emon</p>
             <p className="text-slate-400 font-mono">
               Full stack web developer with high experiences in designing and
@@ -112,11 +114,11 @@ const Intro = () => {
 
 const card = (icon, text1, text2) => {
   return (
-    <div className="flex justify-around w-44 h-24 items-center shadow-lg rounded-xl px-4 z-50 bg-white ">
+    <div className="flex justify-around w-44 h-24 items-center shadow-lg rounded-xl px-4 z-50 bg-white dark:bg-slate-700 ">
       <img className="h-12" src={icon} alt={text1 + text2} />
       <div className="font-sans font-semibold ">
-        <p className="">{text1}</p>
-        <p>{text2}</p>
+        <p className="dark:text-slate-100">{text1}</p>
+        <p className="dark:text-slate-100">{text2}</p>
       </div>
     </div>
   );

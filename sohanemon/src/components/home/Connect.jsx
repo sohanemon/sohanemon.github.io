@@ -3,7 +3,7 @@ import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import { seSvg } from "../nav/Navbar";
 const inputStyle =
-  "ring ring-orange-400 rounded-md p-3 focus:outline-orange-600  ";
+  "ring ring-orange-400 rounded-md p-3 focus:outline-orange-600 bg-slate-300 dark:bg-slate-800 ";
 const Connect = () => {
   const form = useRef();
 
@@ -30,7 +30,7 @@ const Connect = () => {
     <div className=" container justify-evenly flex flex-col md:flex-row h-[60vh] mx-auto m-12  mb-40 sm:mb-0 ">
       <div className=" flex flex-col justify-center items-center gap-10 pb-4 mx-auto">
         <div className="text-center">
-          <p className="text1">Get in touch </p>
+          <p className="text1 dark:text-slate-100">Get in touch </p>
           <p className="text2 text-3xl ">by Connecting with</p>
         </div>
         {seSvg(200)}

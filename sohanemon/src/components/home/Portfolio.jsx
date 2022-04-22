@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import hoc from "../../img/hoc.png";
 import { Autoplay, Pagination, Navigation } from "swiper";
@@ -11,7 +10,7 @@ const Portfolio = () => {
   return (
     <div className="md:m-24">
       <div className="text-center space-y-2">
-        <p className="text1 text-5xl">Recent Projects</p>
+        <p className="text1 text-5xl dark:text-slate-100">Recent Projects</p>
         <p className="text2 text-3xl">Portfolio</p>
       </div>
       <Swiper

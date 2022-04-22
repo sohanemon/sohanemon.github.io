@@ -10,7 +10,7 @@ import Workplaces from "./Workplaces";
 
 const Home = () => {
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden  dark:bg-slate-900">
       <Intro />
       <Services />
       <Experiences />
