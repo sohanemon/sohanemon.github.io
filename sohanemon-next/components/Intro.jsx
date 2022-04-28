@@ -1,8 +1,9 @@
 import React from "react";
-import image1 from "../../vector/black.png";
-import crown from "../../img/crown.png";
-import thumbup from "../../img/thumbup.png";
-import glassesimoji from "../../img/glassesimoji.png";
+import Image from "next/image";
+import image1 from "../assets/vector/black.png";
+import crown from "../assets/img/crown.png";
+import thumbup from "../assets/img/thumbup.png";
+import glassesimoji from "../assets/img/glassesimoji.png";
 import { motion } from "framer-motion";
 import {
   AiFillGithub,
@@ -58,7 +59,7 @@ const inView = {
 const Intro = () => {
   return (
     <>
-      <div className="flex  md:flex-row flex-col-reverse  font-[Gumela] mt-24 mx-12 ">
+      <div className="flex  md:flex-row flex-col-reverse h-[80vh]  font-[Gumela] mt-24 mx-12 ">
         <div className="flex flex-col gap-y-24  flex-1">
           <div className="font-semibold">
             <p className="text-7xl  text-slate-800 dark:text-slate-100 ">
@@ -85,7 +86,7 @@ const Intro = () => {
           whileInView={inView}
           className=" flex-1 relative "
         >
-          <img className="" src={image1} alt="Emon" />
+          <Image className="" src={image1} alt="Emon" />
           <motion.div
             initial={{ x: 100, opacity: 0 }}
             whileInView={inView}
@@ -96,17 +97,23 @@ const Intro = () => {
           <motion.div
             initial={{ x: -100, opacity: 0 }}
             whileInView={inView}
-            className="hidden sm:inline-block absolute  bottom-16"
+            className="hidden sm:inline-block absolute  bottom-16 left-0"
           >
             {card(thumbup, "Pro", "Designer")}
           </motion.div>
-          <motion.img
+          <motion.div
             initial={{ x: -100, opacity: 0 }}
             whileInView={inView}
-            className="hidden sm:inline-block absolute top-0  w-36"
-            src={glassesimoji}
+            className="absolute top-0 left-0"
             alt="imoji"
-          />
+          >
+            <Image
+              src={glassesimoji}
+              height={200}
+              width={250}
+              className="hidden sm:inline-block absolute top-0  "
+            />
+          </motion.div>
         </motion.div>
       </div>
     </>
@@ -116,7 +123,7 @@ const Intro = () => {
 const card = (icon, text1, text2) => {
   return (
     <div className="flex justify-around w-44 h-24 items-center shadow-lg rounded-xl px-4 z-50 bg-white dark:bg-slate-700 ">
-      <img className="h-12" src={icon} alt={text1 + text2} />
+      <Image className="h-12" src={icon} alt={text1 + text2} />
       <div className="font-sans font-semibold ">
         <p className="dark:text-slate-100">{text1}</p>
         <p className="dark:text-slate-100">{text2}</p>

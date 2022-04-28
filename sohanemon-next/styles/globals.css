@@ -1,16 +1,25 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "swiper/css";
+@import "swiper/css/pagination";
+@import "swiper/css/effect-cards";
+@font-face {
+  font-family: Gumela;
+  src: url("../assets/fonts/Gumela\ Regular.otf");
 }
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
+@layer components {
+  .button {
+    @apply bg-orange-300 hover:ring-orange-300  ring-1 ring-transparent text-white rounded-3xl px-3 py-2  bg-gradient-to-r from-orange-300 to-orange-400 hover:from-white hover:to-white shadow-xl hover:shadow-transparent
+    font-semibold font-[Gumela] tracking-wider cursor-pointer hover:text-orange-300  shadow-orange-300;
+  }
+  .text2 {
+    @apply text-6xl text-orange-400 font-[Gumela] font-semibold;
+  }
+  .text1 {
+    @apply text-5xl text-slate-600 font-[Gumela] font-semibold;
+  }
+  .text3 {
+    @apply text-slate-400 font-sans;
+  }
 }

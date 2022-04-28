@@ -2,12 +2,11 @@ import React, { useContext } from "react";
 import { motion } from "framer-motion";
 import { MdNightlight } from "react-icons/md";
 import { IoSunnySharp } from "react-icons/io5";
-import { ThemeContext } from "../../App";
+import { ThemeContext } from "../pages/index";
 import { IconContext } from "react-icons";
 export const style = {
   li: "font-thin cursor-pointer hover:text-orange-300 hover:font-extrabold ",
 };
-
 export const draw = {
   hidden: { pathLength: 0, opacity: 0 },
   visible: (i) => {
@@ -53,6 +52,7 @@ export const seSvg = (size) => (
     />
   </svg>
 );
+
 export const button = style.li + style.button;
 const Navbar = () => {
   const { setDarkMode, darkMode } = useContext(ThemeContext);
@@ -86,7 +86,7 @@ const Navbar = () => {
       <div className=" flex-1 hidden lg:inline-block  ">
         <ul className="flex flex-row list-none gap-6 justify-center items-center">
           <li className={style.li}>
-            <a href="/">Home</a>
+            <a href="">Home</a>
           </li>
           <li className={style.li}>
             <a href="#services">Services</a>

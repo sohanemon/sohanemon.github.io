@@ -47,7 +47,7 @@ const reviews = [
 ];
 const Reviews = () => {
   return (
-    <div className="p-10 mb-56 sm:mb-32 md:mb-0">
+    <div id="" className="p-10 mb-56 sm:mb-32 md:mb-0">
       <p className="text1 text-4xl text-center dark:text-slate-100">
         All the{" "}
         <motion.p
