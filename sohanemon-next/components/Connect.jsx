@@ -72,14 +72,17 @@ const Connect = () => {
         />
         <motion.button
           initial={{ y: 10 }}
-          animate={{ scale: 1.05, transition: { duration: 1, yoyo: Infinity } }}
+          animate={{
+            scale: 1.05,
+            transition: { duration: 1, repeat: Infinity },
+          }}
           whileTap={{
             scale: 0.7,
             transition: {
               duration: 1,
             },
           }}
-          whileInView={{ y: 0, transition: { yoyo: false, duration: 1 } }}
+          whileInView={{ y: 0, transition: { repeat: false, duration: 1 } }}
           className="button self-center px-6 max-w-min"
           onClick={sendEmail}
         >

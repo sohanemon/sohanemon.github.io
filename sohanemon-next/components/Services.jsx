@@ -26,7 +26,7 @@ const Services = () => {
           <motion.button
             animate={{
               scale: 1.05,
-              transition: { duration: 1, yoyo: Infinity },
+              transition: { duration: 1, repeat: Infinity },
             }}
             className="button max-w-md mt-10"
           >
