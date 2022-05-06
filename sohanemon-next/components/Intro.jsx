@@ -1,5 +1,3 @@
-import React from "react";
-import Image from "next/image";
 import image1 from "../assets/vector/black.png";
 import crown from "../assets/img/crown.png";
 import thumbup from "../assets/img/thumbup.png";
@@ -12,6 +10,7 @@ import {
   AiFillInstagram,
 } from "react-icons/ai";
 import { IconContext } from "react-icons";
+import Image from "next/image";
 
 export const socialIcon = (className, size) => {
   return (
@@ -59,7 +58,7 @@ const inView = {
 const Intro = () => {
   return (
     <>
-      <div className="flex  md:flex-row flex-col-reverse h-[80vh]  font-[Gumela] mt-24 mx-12 ">
+      <div className="flex  md:flex-row flex-col-reverse  font-[Gumela] mt-24 mx-12 ">
         <div className="flex flex-col gap-y-24  flex-1">
           <div className="font-semibold">
             <p className="text-7xl  text-slate-800 dark:text-slate-100 ">
@@ -97,21 +96,19 @@ const Intro = () => {
           <motion.div
             initial={{ x: -100, opacity: 0 }}
             whileInView={inView}
-            className="hidden sm:inline-block absolute  bottom-16 left-0"
+            className="hidden sm:inline-block absolute  bottom-16 right-0"
           >
             {card(thumbup, "Pro", "Designer")}
           </motion.div>
           <motion.div
             initial={{ x: -100, opacity: 0 }}
             whileInView={inView}
-            className="absolute top-0 left-0"
-            alt="imoji"
+            className=" hidden sm:inline-block absolute top-0 left-0"
           >
             <Image
               src={glassesimoji}
-              height={200}
-              width={250}
-              className="hidden sm:inline-block absolute top-0  "
+              alt="imoji"
+              className="hidden sm:inline-block absolute top-0  w-36"
             />
           </motion.div>
         </motion.div>

@@ -54,7 +54,13 @@ const Reviews = () => {
           key={i}
           className="flex flex-col items-center border-4  border-slate-300 rounded-lg p-6  gap-5"
         >
-          <Image className="rounded-full w-32 h-32" src={e.icon} alt="" />
+          <Image
+            height={150}
+            width={150}
+            className="rounded-full"
+            src={e.icon}
+            alt=""
+          />
           <p className="text3 text-lg dark:text-slate-300">{e.review}</p>
         </SwiperSlide>
       ))

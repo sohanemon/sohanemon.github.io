@@ -14,7 +14,9 @@ const Portfolio = () => {
       [hoc, ecommerce, musicapp, sidebar].map((e, i) => (
         <SwiperSlide key={i} className=" rounded-lg p-2 ">
           <Image
-            className="w-full rounded-lg filter p-10 sm:p-0
+            height={200}
+            width={400}
+            className="w-full rounded-lg filter p-10
                drop-shadow-lg shadow-slate-100   "
             src={e}
             alt=""
@@ -25,7 +27,7 @@ const Portfolio = () => {
   }, []);
 
   return (
-    <div className="md:m-24">
+    <div className=" m-0 md:m-24">
       <div className="text-center space-y-2">
         <p className="text1 text-5xl dark:text-slate-100">Recent Projects</p>
         <p className="text2 text-3xl">Portfolio</p>

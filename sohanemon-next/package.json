@@ -1,8 +1,12 @@
 {
   "name": "sohanemon-next",
+  "homepage": "http://sohanemon.github.io",
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "export": "next export",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -12,6 +16,7 @@
     "@emailjs/browser": "^3.6.2",
     "emailjs": "^4.0.0",
     "framer-motion": "^6.3.1",
+    "gh-pages": "^3.2.3",
     "next": "12.1.5",
     "react": "18.0.0",
     "react-dom": "18.0.0",
