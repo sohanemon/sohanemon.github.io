@@ -1,4 +1,5 @@
-import image1 from "../assets/vector/black.png";
+//import image1 from "../assets/vector/black.png";
+import image1 from "../assets/vector/me.png";
 import crown from "../assets/img/crown.png";
 import thumbup from "../assets/img/thumbup.png";
 import glassesimoji from "../assets/img/glassesimoji.png";
